@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 19px;
+}
+
+.parent > div {
+  border-radius: 15px;
+}
+
+.div1 {
+  grid-row: span 3 / span 3;
+}
+
+.div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+
+.div3 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+}
+
+.div4 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.div5 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.div6 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+.div7 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+
+.div8 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+
+@media only screen and (max-width: 375px) {
+  .parent {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
